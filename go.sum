@@ -1,2 +1,8 @@
-github.com/mike504110403/goutils/log v0.0.0-20240615171513-2ed97cbbcce9 h1:4DL/N+Jq2sdZj338JHHaW5SBeAtXDyFGjIZKPbaIASo=
-github.com/mike504110403/goutils/log v0.0.0-20240615171513-2ed97cbbcce9/go.mod h1:IPT4sJstVYU0FjQKeo9sKsrVu9J7N0fUnl1RyGs5YDk=
+filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
+filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+github.com/go-sql-driver/mysql v1.8.1 h1:LedoTUt/eveggdHS9qUFC1EFSa8bU2+1pZjSRpvNJ1Y=
+github.com/go-sql-driver/mysql v1.8.1/go.mod h1:wEBSXgmK//2ZFJyE+qWnIsVGmvmEKlqwuVSjsCm7DZg=
+github.com/mike504110403/goutils/dbconn v0.0.0-20240627192659-c4cde9b70672 h1:ZYwPGLndS/R07UD4Xq+bVDUcyD/DeAcoozU2jRczNDU=
+github.com/mike504110403/goutils/dbconn v0.0.0-20240627192659-c4cde9b70672/go.mod h1:6jizQz1dCmdgWtT/OGz84W7tUBMxAua/8oJfOzck2+w=
+github.com/mike504110403/goutils/log v0.0.0-20240627183505-4826c4dcf6dc h1:evYGLo31PL0cYU5tlRDdV+LtWdvgZ9vOOX1FDNZhrZQ=
+github.com/mike504110403/goutils/log v0.0.0-20240627183505-4826c4dcf6dc/go.mod h1:IPT4sJstVYU0FjQKeo9sKsrVu9J7N0fUnl1RyGs5YDk=
