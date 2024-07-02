@@ -8,4 +8,7 @@ require (
 	github.com/mike504110403/goutils/log v0.0.0-20240627183505-4826c4dcf6dc
 )
 
-require filippo.io/edwards25519 v1.1.0 // indirect
+require (
+	filippo.io/edwards25519 v1.1.0 // indirect
+	github.com/gomodule/redigo v1.9.2 // indirect
+)
