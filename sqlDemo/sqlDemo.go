@@ -283,3 +283,42 @@ func TransectionDemo() {
 		return
 	}
 }
+
+func TransectionPrepareDemo() {
+	tx, err := ConnectTxDemo()
+	if err != nil {
+		if tx != nil {
+			tx.Rollback()
+		}
+		log.Error(fmt.Sprintf("Connect to database failed: %s", err.Error()))
+		return
+	}
+	stmt, err := tx.Prepare("UPDATE `user` SET name=? WHERE uid=?")
+	if err != nil {
+		tx.Rollback()
+		log.Error(fmt.Sprintf("Prepare failed: %s", err.Error()))
+		return
+	}
+	// 關閉 stmt 連線才會釋放
+	defer stmt.Close()
+
+	// 批量更新数据
+	users := map[string]int{
+		"Alice": 1,
+		"Bob":   2,
+		"Eve":   3,
+	}
+	for name, id := range users {
+		_, err = stmt.Exec(name, id)
+		if err != nil {
+			tx.Rollback()
+			log.Error(fmt.Sprintf("Update failed: %s", err.Error()))
+			return
+		}
+	}
+	err = tx.Commit()
+	if err != nil {
+		log.Error(fmt.Sprintf("Commit failed: %s", err.Error()))
+		return
+	}
+}
